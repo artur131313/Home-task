@@ -19,7 +19,7 @@
 - Запустите в обеих сессиях `psql` от пользователя `postgres`.
 - Выключите **auto commit** командой:
   ```sql
-  SET AUTOCOMMIT = OFF;
+  SET AUTOCOMMIT = OFF
   ```
 
 ---
