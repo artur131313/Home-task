@@ -50,6 +50,10 @@ SHOW TRANSACTION ISOLATION LEVEL;
 ```
 
 Ожидаемый результат: `read committed` (уровень изоляции по умолчанию).
+![image](https://github.com/user-attachments/assets/2731d14a-ab9a-4698-90c5-edfb187cd19c)
+
+
+
 
 #### **Шаг 3: Работа с read committed**
 
