@@ -68,7 +68,7 @@ SHOW TRANSACTION ISOLATION LEVEL;
    SELECT * FROM persons;
    ```
    **Вопрос:** Видите ли вы новую запись? Если да, то почему?
-   Новой записи не видно
+   Ответ: Новой записи не видно
    ![image](https://github.com/user-attachments/assets/71ace946-8b27-4a17-96e3-9ab46ebb45e6)
 
 4. В **первой сессии** завершите транзакцию:
