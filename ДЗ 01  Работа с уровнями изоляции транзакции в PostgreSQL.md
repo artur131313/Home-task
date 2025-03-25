@@ -103,7 +103,8 @@ SHOW TRANSACTION ISOLATION LEVEL;
    ```
    **Вопрос:** Видите ли вы новую запись? Если да, то почему?
    Ответ: Новая запись не видна.
-![image](https://github.com/user-attachments/assets/1b49283d-028b-4ced-8df3-4cfa62db0136)
+![image](https://github.com/user-attachments/assets/e1ff1358-7bd4-4133-941a-5b69266c3ea9)
+
 
 
 5. В **первой сессии** завершите транзакцию:
@@ -112,7 +113,8 @@ SHOW TRANSACTION ISOLATION LEVEL;
    ```
 6. В **второй сессии** снова выполните `SELECT * FROM persons;`. **Вопрос:** Видите ли вы новую запись? Если да, то почему?
 Ответ: Вижу потому, что  транзакция выполнилась и данные
-![image](https://github.com/user-attachments/assets/5351ec4b-0f5c-4f54-9112-20c84a78b31f)
+![image](https://github.com/user-attachments/assets/823cfbcc-65b1-45d6-8ce3-894ca957ad08)
+
 
 
 
@@ -122,7 +124,8 @@ SHOW TRANSACTION ISOLATION LEVEL;
    COMMIT;
    ```
 8. Выполните `SELECT * FROM persons;` во **второй сессии**. **Вопрос:** Видите ли вы новую запись? Если да, то почему?
-![image](https://github.com/user-attachments/assets/7e8ee539-dd9a-4e12-be35-c87ffe795a96)
+![image](https://github.com/user-attachments/assets/74a073ef-fec1-489f-a796-fd090eec8d51)
+
 
 ---
 
