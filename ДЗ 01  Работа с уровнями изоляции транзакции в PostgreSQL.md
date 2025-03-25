@@ -112,7 +112,7 @@ SHOW TRANSACTION ISOLATION LEVEL;
    COMMIT;
    ```
 6. В **второй сессии** снова выполните `SELECT * FROM persons;`. **Вопрос:** Видите ли вы новую запись? Если да, то почему?
-Ответ: Вижу потому, что  транзакция выполнилась и данные
+Ответ: Новую запись не вижу
 ![image](https://github.com/user-attachments/assets/823cfbcc-65b1-45d6-8ce3-894ca957ad08)
 
 
@@ -124,6 +124,7 @@ SHOW TRANSACTION ISOLATION LEVEL;
    COMMIT;
    ```
 8. Выполните `SELECT * FROM persons;` во **второй сессии**. **Вопрос:** Видите ли вы новую запись? Если да, то почему?
+   Ответ: Новая запись видна, т.к. мы завершили вторую транзакцию.
 ![image](https://github.com/user-attachments/assets/74a073ef-fec1-489f-a796-fd090eec8d51)
 
 
