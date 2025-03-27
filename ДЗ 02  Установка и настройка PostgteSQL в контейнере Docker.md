@@ -83,6 +83,7 @@ SELECT * FROM people;
 ```
 
 ---
+![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
 
 ### 7. Подключение извне
 - Откройте порт 5432 в настройках фаервола/безопасности.
