@@ -34,6 +34,7 @@ newgrp docker
 ```
 
 ---
+![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
 
 ### 3. Создание каталога для данных PostgreSQL
 ```bash
