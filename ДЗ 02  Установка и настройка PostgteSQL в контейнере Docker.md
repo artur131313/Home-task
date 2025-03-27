@@ -132,6 +132,7 @@ docker run -it --rm \
 ```sql
 SELECT * FROM people;
 ```
+![image](https://github.com/user-attachments/assets/fa5e425f-6f33-47ca-9bf0-8bf0dc9f3305)
 
 ---
 
