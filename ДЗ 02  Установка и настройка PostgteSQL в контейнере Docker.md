@@ -23,6 +23,8 @@ sudo systemctl start docker
 ```bash
 docker --version
 ```
+![image](https://github.com/user-attachments/assets/0acc555f-2550-4c6e-9922-a760cce8e4b8)
+
 
 Добавьте текущего пользователя в группу `docker`:
 ```bash
