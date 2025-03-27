@@ -66,6 +66,7 @@ docker run -it --rm \
 ```
 
 При появлении запроса пароля введите `secret`.
+![image](https://github.com/user-attachments/assets/f21d9133-544c-4a37-8035-3a1ac10a91a7)
 
 ---
 
