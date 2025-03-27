@@ -69,6 +69,7 @@ docker run -it --rm \
 ![image](https://github.com/user-attachments/assets/f21d9133-544c-4a37-8035-3a1ac10a91a7)
 
 ---
+![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
 
 ### 6. Создание таблицы и добавление строк
 ```sql
