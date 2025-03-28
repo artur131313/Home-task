@@ -11,7 +11,7 @@
 ### 1. Подготовка ВМ
 - Создана виртуальная машина в Яндекс облаке.
 
-### 2. Установка Docker Engine
+### 2. Установил Docker Engine
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh && rm get-docker.sh && sudo usermod -aG docker $USER && newgrp docker
 ```
@@ -22,22 +22,14 @@ docker --version
 ![image](https://github.com/user-attachments/assets/0acc555f-2550-4c6e-9922-a760cce8e4b8)
 
 
-Добавьте текущего пользователя в группу `docker`:
-```bash
-sudo usermod -aG docker $USER
-# Перезапустите сессию или выполните:
-newgrp docker
-```
-
 ---
-![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
 
-### 3. Создание каталога для данных PostgreSQL
+
+### 3. Создал docker-сеть.
 ```bash
-sudo mkdir -p /var/lib/postgres
-sudo chown 999:999 /var/lib/postgres
+sudo docker network create pg-net
 ```
-
+![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
 ---
 
 ### 4. Запуск контейнера с PostgreSQL 15
