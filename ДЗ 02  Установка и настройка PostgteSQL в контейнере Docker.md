@@ -9,17 +9,13 @@
 ## 📋 Пошаговая инструкция
 
 ### 1. Подготовка ВМ
-- Создайте виртуальную машину с Ubuntu 20.04 или 22.04, либо установите Docker любым удобным способом.
+- Создана виртуальная машина в Яндекс облаке.
 
 ### 2. Установка Docker Engine
 ```bash
-sudo apt update
-sudo apt install -y docker.io
-sudo systemctl enable docker
-sudo systemctl start docker
+curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh && rm get-docker.sh && sudo usermod -aG docker $USER && newgrp docker
 ```
-
-Проверьте версию:
+Проверка версии:
 ```bash
 docker --version
 ```
