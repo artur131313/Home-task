@@ -32,16 +32,9 @@ sudo docker network create pg-net
 ![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
 ---
 
-### 4. Запуск контейнера с PostgreSQL 15
+### 4. Подключил созданную сеть к контейнеру сервера Postgres
 ```bash
-docker run -d \
-  --name pg-server \
-  -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=secret \
-  -e POSTGRES_DB=testdb \
-  -v /var/lib/postgres:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  postgres:15
+sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:15
 ```
 
 ---
