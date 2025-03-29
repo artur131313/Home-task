@@ -79,9 +79,11 @@ select * from people;
 
 ### 8. Удаление и повторный запуск контейнера
 ```bash
-docker stop pg-server
-docker rm pg-server
+sudo docker stop e85eba8898fb
+sudo docker rm e85eba8898fb
 ```
+![image](https://github.com/user-attachments/assets/ff66e14b-d71c-433b-aa8a-f9921c6f907b)
+
 
 Повторный запуск:
 ```bash
