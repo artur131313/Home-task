@@ -65,19 +65,13 @@ SELECT * FROM people;
 ---
 
 ### 7. Подключение извне. Подключился с другого компьютера, таблица people есть:
-- Откройте порт 5432 в настройках фаервола/безопасности.
-- На своём ПК установите `psql`, например:
 
 ```bash
-sudo apt install postgresql-client
-```
-
-- Подключитесь:
-```bash
-psql -h <IP_вашей_ВМ> -U admin -d testdb
+psql -p 5432 -U postgres -h 158.160.135.184 -d postgres -W
+select * from people;
 ```
 ---
---
+
 ![image](https://github.com/user-attachments/assets/c7dd275c-2c01-42f9-b936-b1fe1e6cd931)
 
 
