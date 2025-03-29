@@ -44,7 +44,6 @@ sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres 
 sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h pg-server -U postgres
 ```
 
-При появлении запроса пароля введите `secret`.
 ![image](https://github.com/user-attachments/assets/f21d9133-544c-4a37-8035-3a1ac10a91a7)
 
 ---
