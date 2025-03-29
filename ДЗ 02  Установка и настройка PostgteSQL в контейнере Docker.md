@@ -58,7 +58,7 @@ CREATE TABLE people (
   name TEXT
 );
 
-INSERT INTO mydb (name) VALUES ('Alice'), ('Bob');
+INSERT INTO people (name) VALUES ('Alice'), ('Bob');
 SELECT * FROM people;
 ```
 ![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
