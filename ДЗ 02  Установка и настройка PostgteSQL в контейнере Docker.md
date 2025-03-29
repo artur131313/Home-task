@@ -76,7 +76,6 @@ sudo apt install postgresql-client
 ```bash
 psql -h <IP_вашей_ВМ> -U admin -d testdb
 ```
-Пароль: `secret`
 ---
 --
 ![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
