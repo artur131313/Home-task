@@ -49,7 +49,7 @@ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h p
 ---
 
 
-### 6. Созданил otus, таблицу mydb и добавляем 2 записи:
+### 6. Создал БД otus, таблицу people и добавляем 2 записи:
 ```sql
 CREATE DATABASE otus;
 
