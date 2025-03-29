@@ -29,21 +29,19 @@ docker --version
 ```bash
 sudo docker network create pg-net
 ```
-![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
+
 ---
 
 ### 4. Подключил созданную сеть к контейнеру сервера Postgres
 ```bash
 sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:15
 ```
-
+![image](https://github.com/user-attachments/assets/a4a53594-a9c6-49a6-b26f-f9c77020a32e)
 ---
 
-### 5. Запуск контейнера с клиентом PostgreSQL
+### 5. Запустил отдельный контейнер с клиентом в общей сети с БД:
 ```bash
-docker run -it --rm \
-  --network host \
-  postgres:15 psql -h localhost -U admin -d testdb
+sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h pg-server -U postgres
 ```
 
 При появлении запроса пароля введите `secret`.
