@@ -49,14 +49,16 @@ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h p
 ---
 
 
-### 6. Создание таблицы и добавление строк
+### 6. Созданил otus, таблицу mydb и добавляем 2 записи:
 ```sql
+CREATE DATABASE otus;
+
 CREATE TABLE people (
   id SERIAL PRIMARY KEY,
   name TEXT
 );
 
-INSERT INTO people (name) VALUES ('Alice'), ('Bob');
+INSERT INTO mydb (name) VALUES ('Alice'), ('Bob');
 SELECT * FROM people;
 ```
 ![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
