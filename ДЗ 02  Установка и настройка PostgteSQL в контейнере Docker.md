@@ -77,7 +77,9 @@ select * from people;
 
 ![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
 
-### 8. Удаление и повторный запуск контейнера
+### 8. Удаление и повторный запуск контейнера и проверка что данные остались.
+
+Удаление:
 ```bash
 sudo docker stop e85eba8898fb
 sudo docker rm e85eba8898fb
@@ -85,16 +87,11 @@ sudo docker rm e85eba8898fb
 ![image](https://github.com/user-attachments/assets/ff66e14b-d71c-433b-aa8a-f9921c6f907b)
 
 
-Повторный запуск:
+Повторный запуск, подключение из контейнера-клиента и проверка что данные остались:
 ```bash
-docker run -d \
-  --name pg-server \
-  -e POSTGRES_USER=admin \
-  -e POSTGRES_PASSWORD=secret \
-  -e POSTGRES_DB=testdb \
-  -v /var/lib/postgres:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  postgres:15
+sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:15
+sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h pg-server -U postgres
+select * from people;
 ```
 
 ---
@@ -110,7 +107,8 @@ docker run -it --rm \
 ```sql
 SELECT * FROM people;
 ```
-![image](https://github.com/user-attachments/assets/fa5e425f-6f33-47ca-9bf0-8bf0dc9f3305)
+![image](https://github.com/user-attachments/assets/5781d57c-e293-42d6-aa9d-5709bea35e98)
+
 
 ---
 
