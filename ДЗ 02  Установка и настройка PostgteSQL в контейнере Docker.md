@@ -78,6 +78,9 @@ psql -h <IP_вашей_ВМ> -U admin -d testdb
 ```
 ---
 --
+![image](https://github.com/user-attachments/assets/c7dd275c-2c01-42f9-b936-b1fe1e6cd931)
+
+
 ![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
 
 ### 8. Удаление и повторный запуск контейнера
