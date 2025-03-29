@@ -53,6 +53,8 @@ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h p
 ```sql
 CREATE DATABASE otus;
 
+![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
+
 CREATE TABLE people (
   id SERIAL PRIMARY KEY,
   name TEXT
@@ -61,7 +63,8 @@ CREATE TABLE people (
 INSERT INTO people (name) VALUES ('Alice'), ('Bob');
 SELECT * FROM people;
 ```
-![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
+![image](https://github.com/user-attachments/assets/480ee378-8b14-4698-894b-1fa17b0a429b)
+
 ---
 
 ### 7. Подключение извне
