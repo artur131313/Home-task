@@ -48,7 +48,7 @@ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h p
 ![image](https://github.com/user-attachments/assets/f21d9133-544c-4a37-8035-3a1ac10a91a7)
 
 ---
-![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
+
 
 ### 6. Создание таблицы и добавление строк
 ```sql
@@ -60,9 +60,8 @@ CREATE TABLE people (
 INSERT INTO people (name) VALUES ('Alice'), ('Bob');
 SELECT * FROM people;
 ```
-
+![image](https://github.com/user-attachments/assets/f59c5c74-c602-4723-91d4-b0093df93f9a)
 ---
-![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
 
 ### 7. Подключение извне
 - Откройте порт 5432 в настройках фаервола/безопасности.
@@ -77,8 +76,9 @@ sudo apt install postgresql-client
 psql -h <IP_вашей_ВМ> -U admin -d testdb
 ```
 Пароль: `secret`
-
 ---
+--
+![image](https://github.com/user-attachments/assets/82221f81-f0c8-486c-87c4-bc41899a98ec)
 
 ### 8. Удаление и повторный запуск контейнера
 ```bash
