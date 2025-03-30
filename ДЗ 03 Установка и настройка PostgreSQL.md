@@ -38,6 +38,7 @@ create table test(c1 text);
 insert into test values('1');
 \q
 ```
+![image](https://github.com/user-attachments/assets/3463f73b-0958-4b2b-997b-42eb698267ae)
 
 ---
 
