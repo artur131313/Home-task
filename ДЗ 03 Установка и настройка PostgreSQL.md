@@ -45,10 +45,11 @@ insert into test values('1');
 ### 2. Остановил кластера PostgreSQL
 
 ```bash
-sudo -u postgres pg_ctlcluster 15 main stop
+sudo -u postgres pg_ctlcluster 12 main stop
 ```
 
 ---
+![image](https://github.com/user-attachments/assets/100d139c-c9f9-433d-b0dc-4373d5fc8129)
 
 ### 3. Добавление и инициализация дополнительного диска
 
