@@ -88,10 +88,10 @@ df -h
 - Добавил диск в fstab для автоподключения:
 
 ```bash
-sudo blkid /dev/мdb1
+sudo blkid /dev/vdb1
 sudo nano /etc/fstab
 # Добавьте строку:
-# UUID=<ваш-uuid> /mnt/data ext4 defaults 0 2
+UUID="ec0e1116-99a0-4849-9e6a-04549b80b3ee" /mnt/data ext4 defaults 0 2
 ```
 
 - Перезагрузите систему и проверьте:
@@ -102,6 +102,8 @@ df -h
 ```
 
 ---
+![image](https://github.com/user-attachments/assets/01bf6a7c-f71a-4153-bd7f-18061fd05487)
+
 
 ### 4. Перемещение данных PostgreSQL
 
