@@ -119,6 +119,7 @@ sudo chown -R postgres:postgres /mnt/data
 sudo mv /var/lib/postgresql/16 /mnt/data
 
 sudo mv /mnt/data /var/lib/postgresql/16
+sudo -u postgres pg_lsclusters
 
 ```
 
