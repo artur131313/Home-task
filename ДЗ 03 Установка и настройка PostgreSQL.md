@@ -91,10 +91,10 @@ df -h
 sudo blkid /dev/vdb1
 sudo nano /etc/fstab
 # Добавьте строку:
-UUID="ec0e1116-99a0-4849-9e6a-04549b80b3ee" /mnt/data ext4 defaults 0 2
+UUID="840d0f89-b148-4d78-bfc9-e482ec87117d" /mnt/data ext4 defaults 0 2
 ```
 
-- Перезагрузите систему и проверьте:
+- Перезагрузил систему и проверил:
 
 ```bash
 sudo reboot
