@@ -130,7 +130,7 @@ sudo mv /var/lib/postgresql/16 /mnt/data
 sudo -u postgres pg_ctlcluster 16 main start
 ```
 
-> **Результат:** скорее всего не получится — путь к данным прописан в конфигурации.
+> **Результат:** Error: /var/lib/postgresql/16/main is not accessible or does not exist.
 
 ---
 
