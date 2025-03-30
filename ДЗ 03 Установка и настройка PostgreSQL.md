@@ -12,21 +12,21 @@
 
 ### 1. Создание ВМ и установка PostgreSQL
 
-- Создайте виртуальную машину с Ubuntu 20.04/22.04 LTS (в Яндекс Облаке / VirtualBox / Docker).
-- Установите PostgreSQL 15:
+- Создал виртуальную машину с Ubuntu 20.04 в Яндекс Облаке.
+- Установил PostgreSQL 15:
 
 ```bash
 sudo apt update
 sudo apt install postgresql-15
 ```
 
-- Проверьте статус кластера:
+- Проверил статус кластера:
 
 ```bash
 sudo -u postgres pg_lsclusters
 ```
 
-- Войдите под пользователем `postgres` и создайте тестовую таблицу:
+- Вошел под пользователем `postgres` и создал тестовую таблицу:
 
 ```bash
 sudo -u postgres psql
@@ -40,7 +40,7 @@ insert into test values('1');
 
 ---
 
-### 2. Остановка кластера PostgreSQL
+### 2. Остановил кластера PostgreSQL
 
 ```bash
 sudo -u postgres pg_ctlcluster 15 main stop
