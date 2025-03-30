@@ -83,8 +83,9 @@ sudo mount /dev/vdb1 /mnt/data
 ```bash
 df -h
 ```
+![image](https://github.com/user-attachments/assets/55b4117a-bdba-4162-8b5c-4455d91bcd55)
 
-- Добавьте диск в fstab для автоподключения:
+- Добавил диск в fstab для автоподключения:
 
 ```bash
 sudo blkid /dev/мdb1
