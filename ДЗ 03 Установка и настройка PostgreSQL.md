@@ -102,7 +102,8 @@ df -h
 ```
 
 ---
-![image](https://github.com/user-attachments/assets/01bf6a7c-f71a-4153-bd7f-18061fd05487)
+![image](https://github.com/user-attachments/assets/4bed57ea-a0f0-49fa-bc3b-1fbd8ac77334)
+
 
 
 ### 4. Перемещение данных PostgreSQL
