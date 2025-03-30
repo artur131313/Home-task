@@ -12,8 +12,8 @@
 
 ### 1. Создание ВМ и установка PostgreSQL
 
-- Создал виртуальную машину с Ubuntu 20.04 в Яндекс Облаке.
-- Установил PostgreSQL 12:
+- Создал виртуальную машину с Ubuntu 22.04 в Яндекс Облаке.
+- Установил PostgreSQL 16:
 
 ```bash
 sudo apt update
@@ -45,7 +45,7 @@ insert into test values('1');
 ### 2. Остановил кластера PostgreSQL
 
 ```bash
-sudo -u postgres pg_ctlcluster 12 main stop
+sudo -u postgres pg_ctlcluster 16 main stop
 ```
 
 ---
