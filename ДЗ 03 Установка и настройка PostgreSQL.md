@@ -63,22 +63,22 @@ lsblk
 ```
 ![image](https://github.com/user-attachments/assets/821f8a02-bf0b-49e0-88a5-6e0f883cf70a)
 
-- Разметьте и создайте файловую систему:
+- Разметил и создал файловую систему:
 
 ```bash
-sudo fdisk /dev/sdb
+sudo fdisk /dev/vdb
 # внутри fdisk: n -> p -> <Enter> -> <Enter> -> w
-sudo mkfs.ext4 /dev/sdb1
+sudo mkfs.ext4 /dev/vdb1
 ```
 
-- Создайте точку монтирования и смонтируйте диск:
+- Создал точку монтирования и смонтировал диск:
 
 ```bash
 sudo mkdir /mnt/data
-sudo mount /dev/sdb1 /mnt/data
+sudo mount /dev/vdb1 /mnt/data
 ```
 
-- Убедитесь, что диск смонтирован:
+- Убедился, что диск смонтирован:
 
 ```bash
 df -h
@@ -87,7 +87,7 @@ df -h
 - Добавьте диск в fstab для автоподключения:
 
 ```bash
-sudo blkid /dev/sdb1
+sudo blkid /dev/мdb1
 sudo nano /etc/fstab
 # Добавьте строку:
 # UUID=<ваш-uuid> /mnt/data ext4 defaults 0 2
