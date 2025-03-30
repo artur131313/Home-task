@@ -153,10 +153,10 @@ data_directory = '/mnt/data/16/main'
 ### 7. Повторная попытка запуска
 
 ```bash
-sudo -u postgres pg_ctlcluster 15 main start
+sudo -u postgres pg_ctlcluster 16 main start
 ```
 
-> **Результат:** если всё настроено правильно — PostgreSQL успешно стартует.
+> **Результат:**  PostgreSQL успешно стартует.
 
 ---
 
@@ -169,49 +169,6 @@ select * from test;
 ```
 
 ---
+![image](https://github.com/user-attachments/assets/817e17c8-0303-4207-99fe-f73044e0a0d8)
 
-## ⭐ Задание со звёздочкой
-
-1. Создайте новую ВМ с Ubuntu.
-2. Установите PostgreSQL 15.
-3. Удалите стандартный каталог данных:
-
-```bash
-sudo systemctl stop postgresql
-sudo rm -rf /var/lib/postgresql/15/main
-```
-
-4. Перемонтируйте внешний диск:
-
-```bash
-sudo mkdir /mnt/data
-sudo mount /dev/sdb1 /mnt/data
-```
-
-5. Измените владельца и конфигурацию:
-
-```bash
-sudo chown -R postgres:postgres /mnt/data
-sudo nano /etc/postgresql/15/main/postgresql.conf
-# data_directory = '/mnt/data/15/main'
-```
-
-6. Запустите PostgreSQL:
-
-```bash
-sudo systemctl start postgresql
-```
-
-7. Проверьте таблицу:
-
-```bash
-sudo -u postgres psql
-select * from test;
-\q
-```
-
----
-
-## Результат
-
-Если всё сделано правильно, PostgreSQL на второй ВМ будет использовать данные с внешнего диска, созданные на первой ВМ.
+Перемещение данных PostgreSQL прошло успешно. Мы видим данные.
