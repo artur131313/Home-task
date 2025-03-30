@@ -42,7 +42,7 @@ insert into test values('1');
 
 ---
 
-### 2. Остановил кластера PostgreSQL
+### 2. Остановил кластер PostgreSQL
 
 ```bash
 sudo -u postgres pg_ctlcluster 16 main stop
@@ -52,11 +52,11 @@ sudo -u postgres pg_ctlcluster 16 main stop
 ![image](https://github.com/user-attachments/assets/579e8806-ed72-4830-a25d-3824ef8eaac9)
 
 
-### 3. Добавление и инициализация дополнительного диска
+### 3. Добавил и инициализировал дополнительный диск
 
 - Создал диск размером 10GB.
 - Присоединил его к виртуальной машине.
-- Найдите имя диска (например `/dev/sdb`):
+- Найдите имя диска (например `/dev/vdb`):
 
 ```bash
 lsblk
