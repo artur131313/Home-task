@@ -61,7 +61,7 @@ sudo -u postgres pg_ctlcluster 16 main stop
 ```bash
 lsblk
 ```
-![image](https://github.com/user-attachments/assets/816032f6-a54e-40c5-8f21-50fc03c224d9)
+![image](https://github.com/user-attachments/assets/821f8a02-bf0b-49e0-88a5-6e0f883cf70a)
 
 - Разметьте и создайте файловую систему:
 
