@@ -17,7 +17,7 @@
 
 ```bash
 sudo apt update
-sudo apt install postgresql-15
+sudo apt-get -y install postgresql
 ```
 
 - Проверил статус кластера:
