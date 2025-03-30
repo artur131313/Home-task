@@ -25,6 +25,7 @@ sudo apt-get -y install postgresql
 ```bash
 sudo -u postgres pg_lsclusters
 ```
+![image](https://github.com/user-attachments/assets/da99ced1-c875-4ef1-bf4a-642411154b2c)
 
 - Вошел под пользователем `postgres` и создал тестовую таблицу:
 
