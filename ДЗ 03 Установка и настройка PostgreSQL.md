@@ -116,7 +116,10 @@ sudo chown -R postgres:postgres /mnt/data
 - Переместите данные PostgreSQL:
 
 ```bash
-sudo mv /var/lib/postgresql/15 /mnt/data
+sudo mv /var/lib/postgresql/16 /mnt/data
+
+sudo mv /mnt/data /var/lib/postgresql/16
+
 ```
 
 ---
@@ -124,7 +127,7 @@ sudo mv /var/lib/postgresql/15 /mnt/data
 ### 5. Попытка запуска кластера
 
 ```bash
-sudo -u postgres pg_ctlcluster 15 main start
+sudo -u postgres pg_ctlcluster 16 main start
 ```
 
 > **Результат:** скорее всего не получится — путь к данным прописан в конфигурации.
@@ -133,16 +136,16 @@ sudo -u postgres pg_ctlcluster 15 main start
 
 ### 6. Обновление конфигурации
 
-- Откройте файл конфигурации:
+- Открыл файл конфигурации:
 
 ```bash
-sudo nano /etc/postgresql/15/main/postgresql.conf
+sudo nano /etc/postgresql/16/main/postgresql.conf
 ```
 
-- Измените параметр:
+- Изменил параметр:
 
 ```conf
-data_directory = '/mnt/data/15/main'
+data_directory = '/mnt/data/16/main'
 ```
 
 ---
