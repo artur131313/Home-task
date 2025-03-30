@@ -50,8 +50,7 @@ sudo -u postgres pg_ctlcluster 16 main stop
 ```
 
 ---
-![image](https://github.com/user-attachments/assets/579e8806-ed72-4830-a25d-3824ef8eaac9)
-
+![image](https://github.com/user-attachments/assets/517f4f76-8e05-4a18-b59b-cd9ee376e320)
 
 ### 3. Добавил и инициализировал дополнительный диск
 
