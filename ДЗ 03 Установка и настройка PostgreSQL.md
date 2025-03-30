@@ -13,7 +13,7 @@
 ### 1. Создание ВМ и установка PostgreSQL
 
 - Создал виртуальную машину с Ubuntu 20.04 в Яндекс Облаке.
-- Установил PostgreSQL 15:
+- Установил PostgreSQL 12:
 
 ```bash
 sudo apt update
