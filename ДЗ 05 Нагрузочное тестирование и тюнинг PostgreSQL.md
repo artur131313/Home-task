@@ -23,6 +23,8 @@
 ```bash
 pg_lsclusters
 ```
+![image](https://github.com/user-attachments/assets/7b2e89ec-910b-4626-9e4f-36e92aeeeb3a)
+
 
 ### 3. Первичная настройка PostgreSQL
 
