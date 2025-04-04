@@ -18,7 +18,7 @@
 
 ### 2. Установка PostgreSQL 15
 
-Установим PostgreSQL 15:
+Установим PostgreSQL 17:
 
 ```bash
 sudo apt update
