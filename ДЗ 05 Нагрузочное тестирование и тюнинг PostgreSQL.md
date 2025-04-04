@@ -16,17 +16,12 @@
 - RAM: 8 ГБ
 - Диск: 20 ГБ (SSD)
 
-### 2. Установка PostgreSQL 15
+### 2. Установка PostgreSQL 17
 
 Установим PostgreSQL 17:
 
 ```bash
-sudo apt update
-sudo apt install wget gnupg2 -y
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
-sudo apt update
-sudo apt install postgresql-15 postgresql-contrib -y
+pg_lsclusters
 ```
 
 ### 3. Первичная настройка PostgreSQL
