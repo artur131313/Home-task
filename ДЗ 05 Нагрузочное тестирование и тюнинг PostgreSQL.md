@@ -26,15 +26,7 @@ pg_lsclusters
 ![image](https://github.com/user-attachments/assets/7b2e89ec-910b-4626-9e4f-36e92aeeeb3a)
 
 
-### 3. Первичная настройка PostgreSQL
-
-Переходим в PostgreSQL:
-
-```bash
-sudo -u postgres psql
-```
-
-### 4. Оптимизация параметров PostgreSQL
+### 3. Оптимизация параметров PostgreSQL
 
 Редактируем файл конфигурации `postgresql.conf`:
 
@@ -68,7 +60,7 @@ default_statistics_target = 100
 sudo systemctl restart postgresql
 ```
 
-### 5. Подготовка к тестированию `pgbench`
+### 4. Подготовка к тестированию `pgbench`
 
 Создаём тестовую базу и инициализируем её:
 
@@ -77,13 +69,13 @@ sudo -u postgres createdb pgbench_db
 sudo -u postgres pgbench -i -s 50 pgbench_db
 ```
 
-### 6. Запуск нагрузочного теста
+### 5. Запуск нагрузочного теста
 
 ```bash
 sudo -u postgres pgbench -c 10 -j 4 -T 60 pgbench_db
 ```
 
-### 7. Результаты тестирования
+### 6. Результаты тестирования
 
 ![image](https://github.com/user-attachments/assets/b1578de7-4d96-4ba9-bff4-879eb0363b69)
 
@@ -91,7 +83,7 @@ sudo -u postgres pgbench -c 10 -j 4 -T 60 pgbench_db
 
 
 
-### 8. Вывод
+### 7. Вывод
 
 В результате тюнинга и отключения параметров, повышающих надёжность, удалось добиться производительности **~7221 TPS**.
 
