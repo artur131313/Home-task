@@ -18,7 +18,7 @@
 
 ### 2. Установка PostgreSQL 17
 
-Установим PostgreSQL 17:
+Установил PostgreSQL 17:
 
 ```bash
 pg_lsclusters
@@ -26,7 +26,7 @@ pg_lsclusters
 
 ### 3. Первичная настройка PostgreSQL
 
-Запустим и проверим статус:
+Запустил и проверил статус:
 
 ```bash
 sudo systemctl start postgresql
