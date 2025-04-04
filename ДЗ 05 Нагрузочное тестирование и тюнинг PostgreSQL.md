@@ -28,14 +28,6 @@ pg_lsclusters
 
 ### 3. Первичная настройка PostgreSQL
 
-Запустил и проверил статус:
-
-```bash
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-sudo systemctl status postgresql
-```
-
 Переходим в PostgreSQL:
 
 ```bash
@@ -93,21 +85,15 @@ sudo -u postgres pgbench -c 10 -j 4 -T 60 pgbench_db
 
 ### 7. Результаты тестирования
 
-```
-transaction type: <builtin: TPC-B (sort of)>
-scaling factor: 50
-query mode: simple
-number of clients: 10
-number of threads: 4
-duration: 60 s
-number of transactions actually processed: 81234
-latency average = 7.390 ms
-tps = 1353.122925 (including connections establishing)
-```
+![image](https://github.com/user-attachments/assets/b1578de7-4d96-4ba9-bff4-879eb0363b69)
+
+
+
+
 
 ### 8. Вывод
 
-В результате тюнинга и отключения параметров, повышающих надёжность, удалось добиться производительности **~1353 TPS**.
+В результате тюнинга и отключения параметров, повышающих надёжность, удалось добиться производительности **~7221 TPS**.
 
 Изменённые параметры направлены на:
 - уменьшение избыточной надёжности (отключение `synchronous_commit`);
@@ -119,12 +105,4 @@ tps = 1353.122925 (including connections establishing)
 
 ---
 
-## Графики
 
-### Результаты pgbench
-
-![Результаты pgbench](pgbench_result.png)
-
-### Сравнение до и после тюнинга
-
-![Сравнение до и после](pgbench_comparison.png)
