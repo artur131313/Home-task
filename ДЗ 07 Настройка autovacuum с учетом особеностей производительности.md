@@ -63,7 +63,7 @@ max_wal_size = 16GB
 sudo systemctl restart postgresql
 ```
 
-### 4. Повторный нагрузочный тест
+### 4. Повторил нагрузочный тест
 
 ```bash
 sudo -u postgres pgbench -c8 -P6 -T60 -U postgres postgres
@@ -71,14 +71,18 @@ sudo -u postgres pgbench -c8 -P6 -T60 -U postgres postgres
 
 **Результат:**
 ```
-tps = 1124.567 (without initial connection time)
+tps = 296.316218 (without initial connection time)
 ```
+![image](https://github.com/user-attachments/assets/ef33b466-fb77-4cd5-ae70-7d4a8ddc32a5)
+
+
 
 **Что изменилось и почему?**
-- Увеличение tps на ~31% благодаря:
-  - Оптимизации памяти (`shared_buffers`, `work_mem`)
-  - Более агрессивному autovacuum (меньший `scale_factor`)
-  - Увеличению `autovacuum_max_workers`
+- Увеличение tps ~5% благодаря оптимизации памяти и ввода-вывода:
+    - shared_buffers = 1GB (≈25% от RAM) ускорит доступ к часто используемым данным.
+    - effective_cache_size = 3GB поможет планировщику запросов выбирать более эффективные планы.
+    - work_mem = 6553kB позволит выполнять сортировку и хеш-соединения в памяти, а не на диске. 
+
 
 ### 5. Тестирование autovacuum на таблице с текстовыми данными
 
