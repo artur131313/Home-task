@@ -34,8 +34,10 @@ sudo -u postgres pgbench -c8 -P6 -T60 -U postgres postgres
 
 **Результат:**
 ```
-tps = 856.123 (without initial connection time)
+tps = 282.106517 (without initial connection time)
 ```
+![image](https://github.com/user-attachments/assets/58cc9acc-e5b7-4923-b25c-a6f56ecfee66)
+
 
 ## 3. Оптимизация параметров PostgreSQL
 
