@@ -138,7 +138,7 @@ END $$;
 
 -- Проверяем размер
 SELECT pg_size_pretty(pg_total_relation_size('test_data'));
--- Результат: 72 MB (рост из-за MVCC)
+-- Результат: 492 MB (рост из-за MVCC)
 ```
 ![image](https://github.com/user-attachments/assets/bc1c7e61-9047-4b25-a522-86e0e4ceba32)
 
