@@ -20,7 +20,9 @@ sudo apt update
 sudo apt-get -y install postgresql
 ```
 
-# Инициализировал pgbench
+- Инициализировал pgbench
+
+```bash
 sudo -u postgres pgbench -i postgres
 ```
 
