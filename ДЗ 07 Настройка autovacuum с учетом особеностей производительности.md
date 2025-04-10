@@ -159,15 +159,29 @@ END $$;
 
 -- Проверяем размер
 SELECT pg_size_pretty(pg_total_relation_size('test_data'));
--- Результат: 214 MB (значительный рост!)
+-- Результат: 1000 MB (значительный рост!)
 ```
+![image](https://github.com/user-attachments/assets/179d0992-066a-4a37-91ba-e80038d72b0d)
+
+```sql
+-- Включаемм autovacuum для таблицы
+ALTER TABLE test_data SET (autovacuum_enabled = on);
+
+-- Проверяем размер
+SELECT pg_size_pretty(pg_total_relation_size('test_data'));
+-- Результат: 1000 MB
+```
+![image](https://github.com/user-attachments/assets/a45ac0e6-9f7a-4c3c-a4ab-9dcee43d511c)
+
+Autovacuum по умолчанию только освобождает пространство, но не возвращает его операционной системе
+
 
 ### 7. Анализ результатов
 
 | Параметр              | С autovacuum | Без autovacuum |
 |-----------------------|-------------|----------------|
-| Размер после 5 обновлений | 72 MB       | -              |
-| Размер после 10 обновлений | -          | 214 MB         |
+| Размер после 5 обновлений | 492 MB       | -              |
+| Размер после 10 обновлений | -          | 1000 MB         |
 | Количество мертвых строк | Автоматически очищались | Накопление |
 
 **Выводы:**
@@ -175,24 +189,3 @@ SELECT pg_size_pretty(pg_total_relation_size('test_data'));
 2. Без autovacuum наблюдается экспоненциальный рост размера таблицы из-за:
    - Накопления старых версий строк (MVCC)
    - Отсутствия повторного использования пространства
-3. Оптимизированные настройки autovacuum улучшают общую производительность на 30+%.
-
-## Рекомендации по настройке autovacuum
-
-1. Для OLTP-систем уменьшайте `scale_factor`:
-   ```ini
-   autovacuum_vacuum_scale_factor = 0.02
-   autovacuum_analyze_scale_factor = 0.01
-   ```
-2. Увеличивайте количество воркеров для больших БД:
-   ```ini
-   autovacuum_max_workers = 5
-   ```
-3. Мониторьте эффективность:
-   ```sql
-   SELECT relname, last_vacuum, last_autovacuum, n_dead_tup 
-   FROM pg_stat_user_tables;
-   ```
-``` 
-
-Файл готов к копированию и использованию. Содержит все этапы практической работы с результатами и выводами.
