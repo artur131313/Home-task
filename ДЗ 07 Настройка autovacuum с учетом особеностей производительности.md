@@ -41,26 +41,26 @@ tps = 282.106517 (without initial connection time)
 
 ### 3. Оптимизация параметров PostgreSQL
 
-Добавляем в `/etc/postgresql/15/main/postgresql.conf`:
+Добавил в `/etc/postgresql/15/main/postgresql.conf`:
 
 ```ini
-# Autovacuum настройки
-autovacuum = on
-autovacuum_max_workers = 3
-autovacuum_vacuum_cost_limit = 1000
-autovacuum_vacuum_scale_factor = 0.05
-autovacuum_analyze_scale_factor = 0.02
-
-# Общие настройки
+max_connections = 40
 shared_buffers = 1GB
-work_mem = 16MB
-maintenance_work_mem = 256MB
-random_page_cost = 1.1
+effective_cache_size = 3GB
+maintenance_work_mem = 512MB
+checkpoint_completion_target = 0.9
+wal_buffers = 16MB
+default_statistics_target = 500
+random_page_cost = 4
+effective_io_concurrency = 2
+work_mem = 6553kB
+min_wal_size = 4GB
+max_wal_size = 16GB
 ```
 
 Перезапускаем PostgreSQL:
 ```bash
-sudo systemctl restart postgresql-15
+sudo systemctl restart postgresql
 ```
 
 ### 4. Повторный нагрузочный тест
