@@ -113,7 +113,7 @@ SELECT
 FROM pg_stat_user_tables 
 WHERE relname = 'test_data';
 ```
-
+![image](https://github.com/user-attachments/assets/86320fe5-2c55-4b48-a51f-b66aeb3d577e)
 
 ```
 -- Ждем 5 минут и проверяем снова
@@ -124,6 +124,7 @@ FROM pg_stat_user_tables
 WHERE relname = 'test_data';
 
 ```
+![image](https://github.com/user-attachments/assets/5eb11b4a-3250-47ac-9faa-eb9ff7ee04be)
 
 ```
 -- Еще 5 обновлений
@@ -139,6 +140,8 @@ END $$;
 SELECT pg_size_pretty(pg_total_relation_size('test_data'));
 -- Результат: 72 MB (рост из-за MVCC)
 ```
+![image](https://github.com/user-attachments/assets/08ac45d8-abf5-4cda-bda8-942f8acb43eb)
+
 
 ### 6. Тест с отключенным autovacuum
 
