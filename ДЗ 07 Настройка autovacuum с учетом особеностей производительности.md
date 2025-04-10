@@ -112,7 +112,10 @@ SELECT
   last_autovacuum 
 FROM pg_stat_user_tables 
 WHERE relname = 'test_data';
+```
 
+
+```
 -- Ждем 5 минут и проверяем снова
 SELECT 
   n_dead_tup, 
@@ -120,6 +123,9 @@ SELECT
 FROM pg_stat_user_tables 
 WHERE relname = 'test_data';
 
+```
+
+```
 -- Еще 5 обновлений
 DO $$
 BEGIN
