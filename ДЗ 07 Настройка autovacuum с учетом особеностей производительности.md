@@ -6,15 +6,21 @@
 - Настроить параметры autovacuum для оптимизации работы PostgreSQL.
 - Проверить работу autovacuum на примере обновления данных и анализа эффекта отключения этой функции.
 
-## 1. Подготовка тестового окружения
+---
 
-# Создал ВМ с 2 ядрами, 4 ГБ ОЗУ, 10 ГБ SSD
-# Устанавил PostgreSQL 16
+## Описание / Пошаговая инструкция выполнения
+
+### 1. Создание ВМ и установка PostgreSQL
+
+- Создал виртуальную машину с Ubuntu 22.04 в Яндекс Облаке.
+- Установил PostgreSQL 16:
+
 ```bash
-sudo apt update && sudo apt install postgresql-15 -y
+sudo apt update
+sudo apt-get -y install postgresql
 ```
 
-# Инициализируем pgbench
+# Инициализировал pgbench
 sudo -u postgres pgbench -i postgres
 ```
 
