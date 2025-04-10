@@ -26,7 +26,7 @@ sudo apt-get -y install postgresql
 sudo -u postgres pgbench -i postgres
 ```
 
-## 2. Первый нагрузочный тест (дефолтные настройки)
+### 2. Первый нагрузочный тест (дефолтные настройки)
 
 ```bash
 sudo -u postgres pgbench -c8 -P6 -T60 -U postgres postgres
@@ -39,7 +39,7 @@ tps = 282.106517 (without initial connection time)
 ![image](https://github.com/user-attachments/assets/58cc9acc-e5b7-4923-b25c-a6f56ecfee66)
 
 
-## 3. Оптимизация параметров PostgreSQL
+### 3. Оптимизация параметров PostgreSQL
 
 Добавляем в `/etc/postgresql/15/main/postgresql.conf`:
 
@@ -63,7 +63,7 @@ random_page_cost = 1.1
 sudo systemctl restart postgresql-15
 ```
 
-## 4. Повторный нагрузочный тест
+### 4. Повторный нагрузочный тест
 
 ```bash
 sudo -u postgres pgbench -c8 -P6 -T60 -U postgres postgres
@@ -80,7 +80,7 @@ tps = 1124.567 (without initial connection time)
   - Более агрессивному autovacuum (меньший `scale_factor`)
   - Увеличению `autovacuum_max_workers`
 
-## 5. Тестирование autovacuum на таблице с текстовыми данными
+### 5. Тестирование autovacuum на таблице с текстовыми данными
 
 ```sql
 -- Создаем таблицу
@@ -130,7 +130,7 @@ SELECT pg_size_pretty(pg_total_relation_size('test_data'));
 -- Результат: 72 MB (рост из-за MVCC)
 ```
 
-## 6. Тест с отключенным autovacuum
+### 6. Тест с отключенным autovacuum
 
 ```sql
 -- Отключаем autovacuum для таблицы
@@ -150,7 +150,7 @@ SELECT pg_size_pretty(pg_total_relation_size('test_data'));
 -- Результат: 214 MB (значительный рост!)
 ```
 
-## 7. Анализ результатов
+### 7. Анализ результатов
 
 | Параметр              | С autovacuum | Без autovacuum |
 |-----------------------|-------------|----------------|
