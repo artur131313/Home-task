@@ -1,4 +1,3 @@
-```markdown
 # Практическая работа: Настройка Autovacuum в PostgreSQL
 
 ## Цель
