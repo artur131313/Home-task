@@ -140,7 +140,7 @@ END $$;
 SELECT pg_size_pretty(pg_total_relation_size('test_data'));
 -- Результат: 492 MB (рост из-за MVCC)
 ```
-![image](https://github.com/user-attachments/assets/bc1c7e61-9047-4b25-a522-86e0e4ceba32)
+![image](https://github.com/user-attachments/assets/d894c881-76c2-48de-ad5c-7fb4d54f442f)
 
 ### 6. Тест с отключенным autovacuum
 
