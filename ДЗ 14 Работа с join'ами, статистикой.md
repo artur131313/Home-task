@@ -84,6 +84,8 @@ RIGHT JOIN departments d ON e.department_id = d.id;
 
 > 💬 Комментарий:  
 > Показывает все департаменты, даже если в них нет сотрудников.
+
+
 ![image](https://github.com/user-attachments/assets/961ccdd2-7ae7-4203-b63b-6ee6cfe892a3)
 
 ---
