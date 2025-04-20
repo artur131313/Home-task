@@ -55,7 +55,8 @@ INNER JOIN departments d ON e.department_id = d.id;
 
 > 💬 Комментарий:  
 > Показывает только тех сотрудников, у которых указан департамент, и он существует в таблице `departments`.
-![image](https://github.com/user-attachments/assets/ad17694b-025a-4ed5-8572-5a5f13ee1549)
+![image](https://github.com/user-attachments/assets/aba3373a-631c-4ad9-aa32-19ef2681d93b)
+
 
 ---
 
@@ -69,6 +70,7 @@ LEFT JOIN departments d ON e.department_id = d.id;
 
 > 💬 Комментарий:  
 > Показывает всех сотрудников, даже если у них не указан департамент (`department_id IS NULL`) или он отсутствует в `departments`.
+![image](https://github.com/user-attachments/assets/4ab4304b-cd4d-4773-93ef-6f2004b41ce9)
 
 ---
 
@@ -82,6 +84,7 @@ RIGHT JOIN departments d ON e.department_id = d.id;
 
 > 💬 Комментарий:  
 > Показывает все департаменты, даже если в них нет сотрудников.
+![image](https://github.com/user-attachments/assets/961ccdd2-7ae7-4203-b63b-6ee6cfe892a3)
 
 ---
 
@@ -95,6 +98,7 @@ CROSS JOIN projects p;
 
 > 💬 Комментарий:  
 > Формирует декартово произведение — каждая строка из `employees` комбинируется с каждой строкой из `projects`.
+![image](https://github.com/user-attachments/assets/1e7fe2a5-1428-4c20-a4da-26fc8cba8cb7)
 
 ---
 
